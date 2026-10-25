@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlgebraQuest</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js"></script>
+
 </head>
 <body class="bg-[#1e1e1e] text-slate-200 min-h-screen flex flex-col justify-between font-sans">
 
     <!--header-->
     <header class="bg-[#1e1e1e] border border-[#2c2c2c] p-6 text-center">
         <h1 class="text-2xl md:text-3xl font-extrabold tracking-wider">
-            <span class="text-cyan-400">Algebra</span><span class="text-emerald-400">Quest</span>
+            <a href="index.html" class="hover:opacity-80 transition-opacity">
+                <span class="text-cyan-400">Algebra</span><span class="text-emerald-400">Quest</span>
+            </a>
         </h1>
         <p class="text-sm text-slate-200 mt-1">Website interactiv pentru învățarea elementelor de algebră de liceu</p>
     </header>
@@ -24,29 +29,29 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
             
             <!--buton a XIa-->
-            <div class="bg-[#1e1e1e] border border-[#2c2c2c] rounded-2xl p-6 md:p-8 hover:border-cyan-500 transition duration-300 flex flex-col justify-between shadow-xl">
+            <div class="bg-[#1e1e1e] border border-[#2c2c2c] rounded-md p-6 md:p-8 hover:border-cyan-500 transition duration-300 flex flex-col justify-between shadow-xl">
                 <div>
-                    <span class="text-xs uppercase tracking-widest bg-cyan-950 text-cyan-400 px-3 py-1 rounded-full font-semibold">Clasa a XI-a</span>
+                    <span class="text-xs uppercase tracking-wide bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-md font-semibold">Clasa a XI-a</span>
                     <h3 class="text-2xl font-bold mt-4 mb-2">Matrice și Determinanți</h3>
                     <p class="text-slate-200 text-sm leading-relaxed mb-6">
                         &bull; Matrice <br> &bull; Determinanți <br> &bull; Operații pe matrice <br> &bull; <strong>Studiu de caz:</strong> Transformări liniare în spațiu bidimensional sau tridimensional
                     </p>
                 </div>
-                <a href="clasa11.html" class="inline-block bg-cyan-600 hover:bg-cyan-500 text-slate-950 font-bold text-center py-3 px-6 rounded-xl transition duration-200">
+                <a href="clasa11.html" class="inline-block bg-cyan-600 text-slate-950 hover:bg-cyan-500 hover:text-slate-200 font-bold text-center py-3 px-6 rounded-md transition duration-200">
                     Accesează capitolul
                 </a>
             </div>
 
             <!--buton a XIIa-->
-            <div class="bg-[##1e1e1e] border border-[#2c2c2c] rounded-2xl p-6 md:p-8 hover:border-emerald-500 transition duration-300 flex flex-col justify-between shadow-xl">
+            <div class="bg-[#1e1e1e] border border-[#2c2c2c] rounded-md p-6 md:p-8 hover:border-emerald-500 transition duration-300 flex flex-col justify-between shadow-xl">
                 <div>
-                    <span class="text-xs uppercase tracking-widest bg-emerald-950 text-emerald-400 px-3 py-1 rounded-full font-semibold">Clasa a XII-a</span>
+                    <span class="text-xs uppercase tracking-wide bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-md font-semibold">Clasa a XII-a</span>
                     <h3 class="text-2xl font-bold mt-4 mb-2">Structuri Algebrice</h3>
                     <p class="text-slate-200 text-sm leading-relaxed mb-6">
                         &bull; Legi de compoziție <br> &bull; Verificarea proprietății de monoid/grup (comutativ/abelian, după caz) <br> &bull; <strong>Studiu de caz:</strong> Compunerea tabelei Cayley și verificarea proprietăților unor grupuri
                     </p>
                 </div>
-                <a href="clasa12.html" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-bold text-center py-3 px-6 rounded-xl transition duration-200">
+                <a href="clasa12.html" class="inline-block bg-emerald-600 text-slate-950 hover:bg-emerald-500 hover:text-slate-200 font-bold text-center py-3 px-6 rounded-md transition duration-200">
                     Accesează capitolul
                 </a>
             </div>
