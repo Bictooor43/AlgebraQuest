@@ -61,7 +61,7 @@
                             &bull; <strong>Obersevație:</strong> Mulțimea matricelor de tip $(m,n)$ peste $\mathbb{C}$ (cu elemente numere complexe) se notează cu $M_{m,n}(\mathbb{C})$. Avem astfel: $ A \in M_{m,n}(\mathbb{C})$ sau $A=(i,j), 1 \leq i \leq m, 1 \leq j \leq n$.
                             <br> <br>
                             &bull; <strong>Tipuri de matrice:</strong>
-                            <ul>
+                            <ol class="list-decimal pl-6s">
                                 <li>
                                     <i>Matrice linie</i> sau de tip $(1,n)$ - matrice cu o singură linie;
                                 </li>
@@ -72,7 +72,7 @@
                                     <i>Matricea nulă $0_{m,n}$</i> - toate elementele sunt egale cu 0;
                                 </li>
                                 <li>
-                                    <i>Matrice pătratică de ordin n</i> - numărul de liniii este egal cu numărul de coloane; în cazul de fațăm Mulțimea matricelor se notează $M_{n}(\mathbb{C})$
+                                    <i>Matrice pătratică de ordin n</i> - numărul de liniii este egal cu numărul de coloane; în cazul de față Mulțimea matricelor se notează $M_{n}(\mathbb{C})$
                                 </li>
                                 <li>
                                     <i>Matricea unitate de ordinul n: </i>
@@ -86,7 +86,7 @@
                                     \end{pmatrix}
                                     $$
                                 </li>
-                            </ul>
+                            </ol>
                         </p>
                         
                     </div>
@@ -100,10 +100,93 @@
                         <span>2. Operații cu matrice</span>
                         <span class="text-cyan-600 group-open:rotate-180 transition-transform duration-200">▼</span>
                     </summary>
+                    <div class="p-4 border-t border-[#2c2c2c] text-slate-200 text-sm space-y-3 bg-[#161616]">
+                        <p>
+                            &bull; <strong>Egalitatea a două matrice:</strong> Două matrice sunt egale doar dacă sunt de același tip și dacă elementele corespunzătoare sunt egale, 
+                            adică, pentru $A=(a_{ij}) \in M_{m,n}(\mathbb{C})$ și $B=(b_{ij}) \in M_{p,q}(\mathbb{C})$, avem: $A=B \iff m=p, n=q$ și $a_{ij}=b_{ij}, \forall i=\overline{1,m}, j=\overline{1,n}$.
+                            <br> <br>
+                            &bull; <strong>Adunara, scăderea matricelor:</strong> Se poate efectua doar dacă sunt de același tip, se adună (respectiv se scad) elementele corespunzătoare, adică $A=(a_{ij}) \in M_{m,n}(\mathbb{C}), B=(b_{ij}) \in M_{m,n}(\mathbb{C}) \implies C=A+B \in M_{m,n}(\mathbb{C}) $
+                            este suma matricelor $A$ și $B$, cu $c_{ij}=a_{ij}+b_{ij}$, iar $D=(d_{ij}) \in M_{m,n}(\mathbb{C}), d_{ij}=a_{ij}-b_{ij}$, reprezintă diferența lor.
+                            <br> <br>
+                            &bull; <strong>Proprietăți ale adunării matricelor:</strong>
+                            <ol class="list-decimal pl-6">
+                                <li>Adunarea este asociativă;</li>
+                                <li>Matricea nulă este element neutru al operației de adunare;</li>
+                                <li>Orice matrice are o matrice opusă;</li>
+                                <li>Adunarea este comutativă;</li>
+                            </ol>
+                            <br>
+                            &bull; <strong>Înmulțirea cu scalari a matricelor:</strong> Dacă $A=(a_{ij}) \in M_{m,n}(\mathbb{C})$ și $\alpha \in \mathbb{C}$, atunci matricea $B=(\alpha \cdot a_{ij}) \in M_{m,n}(\mathbb{C})$ este produsul matricei A cu scalarul $\alpha$ și se notează $\alpha \cdot A$.
+                            <br> <br>
+                            &bull; <strong>Proprietăți ale înmulțirii cu scalari a matricelor:</strong>
+                            <ol class="list-decimal pl-6">
+                                <li>$\alpha \cdot (A+B) = \alpha \cdot A + \alpha \cdot B, \forall \alpha \in \mathbb{C}, A,B \in M_{m,n}(\mathbb{C})$;</li>
+                                <li>$(\alpha + \beta) \cdot A = \alpha \cdot A + \alpha \cdot B, \forall \alpha, \beta \in \mathbb{C}, A \in M_{m,n}(\mathbb{C})$;</li>
+                                <li>$\alpha \cdot (\beta \cdot A) = (\alpha \cdot \beta) \cdot A, \forall A \in M_{m,n}(\mathbb{C})$;</li>
+                                <li>$1 \cdot A = A, \forall A \in M_{m,n}(\mathbb{C})$;</li>
+                                <li>$\alpha \cdot A = 0_{m,n} \iff \alpha = 0 \lor A = 0_{m,n}$;</li>
+                            </ol>
+                            <br>
+                            &bull; <strong>Înmulțirea matricelor:</strong> Dacă $A = (a_{ij}) \in M_{m,n}(\mathbb{C})$ și $B = (b_{ij}) \in M_{n,p}(\mathbb{C})$, atunci se poate determina matricea produs $C = (c_{ij}) = A \cdot B \in M_{m,p}(\mathbb{C})$.
+                            <br>
+                            <i>Observație:</i> Este necesar ca numărul coloanelor primei matrice să coincidă cu numărul liniilor celei de-a doua!!
+                            <br>
+                            Elementele matricei produs $C=(c_{ij}) = A \cdot B \in M_{m,p}(\mathbb{C})$ sunt date de: $c_{ij} = a_{i1} \cdot b_{1j} + a_{i2} \cdot b_{2j} + ... + a_{in} \cdot b_{nj}$.                 
+                            <br> <br>
+                            &bull; <strong>Proprietăți ale înmulțirii matricelor:</strong>
+                            <ol class="list-decimal pl-6">
+                                <li>Înmulțirea este asociativă;</li>
+                                <li>Matricea unitate este element neutru pentru operația de înmulțire a matricelor;</li>
+                                <li>Nu orice matrice admite matricea inversă</li>
+                                <li>Înmulțirea matricelor <strong>NU</strong> este comutativă;</li>
+                                <li>Înmulțirea matricelor este distributivă, la stânga și la dreapta, față de adunarea natricelor.</li>
+                            </ol>
+                        </p>
+                    </div>
+                </details>
+            </article>
+
+            <!--Articolul 3-->
+            <article class="bg-[#1e1e1e] border border-[#2c2c2c] rounded-md overflow-hidden shadow-md">
+                <details id="articol-3" class="group" ontoggle="saveState('articol-3')">
+                    <summary class="p-4 flex justify-between items-center cursor-pointer font-semibold text-slate-200 hover:bg-[#2a2a2a] transition select-none">
+                        <span>3. Determinanți</span>
+                        <span class="text-cyan-600 group-open:rotate-180 transition-transform duration-200">▼</span>
+                    </summary>
+                    <div class="p-4 border-t border-[#2c2c2c] text-slate-200 text-sm space-y-3 bg-[#161616]">
+                        <p></p>
+                    </div>
+                </details>
+            </article>
+
+            <!--Articolul 4-->
+            <article class="bg-[#1e1e1e] border border-[#2c2c2c] rounded-md overflow-hidden shadow-md">
+                <details id="articol-4" class="group" ontoggle="saveState('articol-4')">
+                    <summary class="p-4 flex justify-between items-center cursor-pointer font-semibold text-slate-200 hover:bg-[#2a2a2a] transition select-none">
+                        <span>4. Rangul și inversa unei matrice</span>
+                        <span class="text-cyan-600 group-open:rotate-180 transition-transform duration-200">▼</span>
+                    </summary>
+                    <div class="p-4 border-t border-[#2c2c2c] text-slate-200 text-sm space-y-3 bg-[#161616]">
+                        <p></p>
+                    </div>
+                </details>
+            </article>
+
+            <!--Articolul 5-->
+            <article class="bg-[#1e1e1e] border border-[#2c2c2c] rounded-md overflow-hidden shadow-md">
+                <details id="articol-5" class="group" ontoggle="saveState('articol-5')">
+                    <summary class="p-4 flex justify-between items-center cursor-pointer font-semibold text-slate-200 hover:bg-[#2a2a2a] transition select-none">
+                        <span>5. Sisteme de ecuații liniare</span>
+                        <span class="text-cyan-600 group-open:rotate-180 transition-transform duration-200">▼</span>
+                    </summary>
+                    <div class="p-4 border-t border-[#2c2c2c] text-slate-200 text-sm space-y-3 bg-[#161616]">
+                        <p></p>
+                    </div>
                 </details>
             </article>
 
         </section>
+
         <section id="sec-calculator" class="tab-content hidden space-y-4">
             <h2>Test2</h2>
         </section>
