@@ -7,6 +7,14 @@
     <title>Clasa a 11-a</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="main.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </head>
 
@@ -15,22 +23,86 @@
     <header class="bg-[#1e1e1e] border border-[#2c2c2c] p-6 text-center">
         <h1 class="text-2xl md:text-3xl font-extrabold tracking-wider">
             <a href="index.html" class="hover:opacity-80 transition-opacity">
-                <span class="text-cyan-400">Algebra</span><span class="text-emerald-400">Quest</span>
+                <span class="text-cyan-600">Algebra</span><span class="text-emerald-600">Quest</span>
             </a>
         </h1>
         <p class="text-sm text-slate-200 mt-1">Noțiuni teoretice și practice pentru învățarea <strong>algebrei liniare</strong></p>
     </header>
 
     <nav class="bg-[#161616] border-b border-[#2c2c2c] p-4 flex justify-center gap-3 overflow-x-auto">
-        <button onclick="switchTab('teorie')" id="tab-teorie" class="tab-btn bg-[#1e1e1e] border border-cyan-500 text-cyan-400 px-5 py-2.5 rounded-xl font-bold text-sm shadow-md transition duration-300">Teorie</button>
-        <button onclick="switchTab('calculator')" id="tab-calculator" class="tab-btn bg-[#1e1e1e] border border-[#2c2c2c] text-[#9ca3af] hover:border-cyan-500 hover:text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-md transition duration-300">Calculator</button>
-        <button onclick="switchTab('vizualizare')" id="tab-vizualizare" class="tab-btn bg-[#1e1e1e] border border-[#2c2c2c] text-[#9ca3af] hover:border-cyan-500 hover:text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-md transition duration-300">Vizualizare</button>
+        <button onclick="switchTab('teorie')" id="tab-teorie" class="tab-btn bg-cyan-600 border border-cyan-600 text-slate-200 px-5 py-2.5 rounded-md font-bold text-sm shadow-md transition duration-300">Teorie</button>
+        <button onclick="switchTab('calculator')" id="tab-calculator" class="tab-btn bg-[#1e1e1e] border border-[#2c2c2c] text-slate-200 hover:border-cyan-600 hover:text-white px-5 py-2.5 rounded-md font-bold text-sm shadow-md transition duration-300">Calculator</button>
+        <button onclick="switchTab('vizualizare')" id="tab-vizualizare" class="tab-btn bg-[#1e1e1e] border border-[#2c2c2c] text-slate-200 hover:border-cyan-600 hover:text-white px-5 py-2.5 rounded-md font-bold text-sm shadow-md transition duration-300">Vizualizare</button>
 
     </nav>
 
     <main class="container mx-auto px-4 py-8 flex-grow max-w-4xl">
         <section id="sec-teorie" class="tab-content space-y-4">
-            <h2>Test1</h2>
+            <h2 class="text-xl font-semibold mb-6 text-slate-200 pb-2 text-center">Breviar teoretic</h2>
+            <!--Articolul 1-->
+            <article class="bg-[#1e1e1e] border border-[#2c2c2c] rounded-md overflow-hidden shadow-md">
+                <details id="articol-1" class="group" ontoggle="saveState('articol-1')">
+                    <summary class="p-4 flex justify-between items-center cursor-pointer font-semibold text-slate-200 hover:bg-[#2a2a2a] transition select-none">
+                        <span>1. Definiție</span>
+                        <span class="text-cyan-600 group-open:rotate-180 transition-transform duration-200">▼</span>
+                    </summary>
+                    <div class="p-4 border-t border-[#2c2c2c] text-slate-200 text-sm space-y-3 bg-[#161616]">
+                        <p>
+                            O matrice cu $m$ linii și $n$ coloane (sau matrice de tip(m,n)) este o funcție $f \colon \{ 1, 2, 3, ..., m \} \times \{ 1, 2, 3, ..., n \} \to \mathbb{C}, f((i,j)) = a_{ij}$ <br>
+                            Schematic, ea poate fi scrisă sub forma unui tablou cu $m$ linii și $n$ coloane de forma: 
+                            $$
+                            A = \begin{pmatrix}
+                            a_{11} & a_{12} &......& a_{1n} \\
+                            a_{21} & a_{22} &......& a_{2n} \\
+                            ... & ... & ...... & ... \\
+                            a_{m1} & a_{m2} & ...... & a_{mn}
+                            \end{pmatrix}
+                            $$
+                            &bull; <strong>Obersevație:</strong> Mulțimea matricelor de tip $(m,n)$ peste $\mathbb{C}$ (cu elemente numere complexe) se notează cu $M_{m,n}(\mathbb{C})$. Avem astfel: $ A \in M_{m,n}(\mathbb{C})$ sau $A=(i,j), 1 \leq i \leq m, 1 \leq j \leq n$.
+                            <br> <br>
+                            &bull; <strong>Tipuri de matrice:</strong>
+                            <ul>
+                                <li>
+                                    <i>Matrice linie</i> sau de tip $(1,n)$ - matrice cu o singură linie;
+                                </li>
+                                <li>
+                                    <i>Matrice coloană</i> sau de tip $(1,m)$ - matrice cu o singură coloană;
+                                </li>
+                                <li>
+                                    <i>Matricea nulă $0_{m,n}$</i> - toate elementele sunt egale cu 0;
+                                </li>
+                                <li>
+                                    <i>Matrice pătratică de ordin n</i> - numărul de liniii este egal cu numărul de coloane; în cazul de fațăm Mulțimea matricelor se notează $M_{n}(\mathbb{C})$
+                                </li>
+                                <li>
+                                    <i>Matricea unitate de ordinul n: </i>
+                                    $$
+                                    I_{n} = \begin{pmatrix}
+                                    1 & 0 & 0 & ...... & 0 \\
+                                    0 & 1 & 0 & ...... & 0 \\
+                                    0 & 0 & 1 & ...... & 0 \\
+                                    ... & ... & ... & ...... & ... \\
+                                    0 & 0 & 0 & ...... & 1
+                                    \end{pmatrix}
+                                    $$
+                                </li>
+                            </ul>
+                        </p>
+                        
+                    </div>
+                </details>
+            </article>
+
+            <!--Articolul 2-->
+            <article class="bg-[#1e1e1e] border border-[#2c2c2c] rounded-md overflow-hidden shadow-md">
+                <details id="articol-2" class="group" ontoggle="saveState('articol-2')">
+                    <summary class="p-4 flex justify-between items-center cursor-pointer font-semibold text-slate-200 hover:bg-[#2a2a2a] transition select-none">
+                        <span>2. Operații cu matrice</span>
+                        <span class="text-cyan-600 group-open:rotate-180 transition-transform duration-200">▼</span>
+                    </summary>
+                </details>
+            </article>
+
         </section>
         <section id="sec-calculator" class="tab-content hidden space-y-4">
             <h2>Test2</h2>
