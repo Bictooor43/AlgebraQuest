@@ -87,8 +87,7 @@
                                     $$
                                 </li>
                             </ol>
-                        </p>
-                        
+                        </p>                       
                     </div>
                 </details>
             </article>
@@ -154,7 +153,33 @@
                         <span class="text-cyan-600 group-open:rotate-180 transition-transform duration-200">▼</span>
                     </summary>
                     <div class="p-4 border-t border-[#2c2c2c] text-slate-200 text-sm space-y-3 bg-[#161616]">
-                        <p></p>
+                        <p>
+                            &bull; Dacă $A \in M_{n}(\mathbb{C})$, determinantul său este un număr complex notat $\det A$, anume: $$ \det A = \sum_{\sigma \in \S_n} \varepsilon(\sigma) \cdot a_{1\sigma(1)} \cdot a_{2\sigma(2)} \cdot ... \cdot a_{n\sigma(n)}$$
+                            <br> <br>
+                            &bull; <i>Observație - cazuri particulare:</i>
+                            $$
+                            A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \implies \det A = \begin{vmatrix} a & b \\ c & d \end{vmatrix} = a \cdot d - b \cdot c
+                            $$
+                            $$
+                            B = \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix}  \implies \det B = \begin{vmatrix} a & b & c \\ d & e & f \\ g & h & i \end{vmatrix} = a \cdot e \cdot i + d \cdot h \cdot c + b \cdot f \cdot g - g \cdot e \cdot c - h \cdot f \cdot a - d \cdot b \cdot i
+                            $$
+                            <br>
+                            &bull; <strong>Proprietățile determinanților: </strong>
+                            <ul class="list-decimal pl-6">
+                                <li>Dacă $A \in M_{n}(\mathbb{C})$, atunci $\det A = \det(A^\top)$;</li>
+                                <li>Dacă matricea $B$ se obține din matricea $A \in M_{n}(\mathbb{C})$ prin schimbarea a două linii (coloane) între ele, atunci $\det B = - \det A$;</li>
+                                <li>Dacă matricea $A \in M_{n}(\mathbb{C})$ are două linii (coloane) identice, atunci $\det A = 0$;</li>
+                                <li>Dacă matricea $B$ se obține din matricea $A \in M_{n}(\mathbb{C})$ prin înmulțirea unei linii (coloane) fixate cu un număr $\alpha \in \mathbb{C}$, atunci $\det B = \alpha \cdot \det A$;</li>
+                                <li>Dacă matricea $A \in M_{n}(\mathbb{C})$ are două linii (coloane) proporționale, atunci $\det A = 0$;</li>
+                                <li>Dacă o linie (coloană) a unei matrice $A \in M_{n}(\mathbb{C})$ are toate elementele nule, atunci $\det A = 0$;</li>
+                                <li>Dacă o linie (coloană) a unei matrice $A \in M_{n}(\mathbb{C})$ este combinație liniară a celorlaltor liniii (coloane) ale lui A, atunci $\det A = 0$;</li>
+                                <li>Dacă $B$ este matricea obținută din $A$ prin adunarea unei linii (coloane) cu o altă linie (coloană) ale lui $A$, eventual înmulțită cu un același număr, atunci $\det B = \det A$</li>
+                                <li>Dacă $A, B \in M_{n}(\mathbb{C})$, atunci $\det (AB) = (\det A) \cdot (\det B)$</li>
+                            </ul>
+                            <br>
+                            &bull; <strong>IMPORTANT - teorema Cayley-Hamilton</strong> Dacă $A \in M_{2}(\mathbb{C})$, atunci:
+                            $$ A^2 - Tr(A) \cdot A - \det(A) \cdot I_{2} = 0_{2} \text{, unde } Tr(A) = \sum_{i \in \overline{1,n}} a_{ii} \text{.} $$
+                        </p>
                     </div>
                 </details>
             </article>
