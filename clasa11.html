@@ -229,7 +229,51 @@
                         <span class="text-cyan-600 group-open:rotate-180 transition-transform duration-200">▼</span>
                     </summary>
                     <div class="p-4 border-t border-[#2c2c2c] text-slate-200 text-sm space-y-3 bg-[#161616]">
-                        <p></p>
+                        <p>
+                            &bull; Forma generală a unui sistem cu $m$ ecuații liniare și $n$ necunoscute (peste mulțimea numerelor complexe $\mathbb{C}$) este:
+                            $$
+                            (S) \begin{cases}
+                            a_{11} \cdot x_{1} + a_{12} \cdot x_{2} + \dots + a_{1n} \cdot x_{n} = b_{1} \\
+                            a_{21} \cdot x_{1} + a_{22} \cdot x_{2} + \dots + a_{2n} \cdot x_{n} = b_{2} \\
+                            \dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots \\
+                            a_{m1} \cdot x_{1} + a_{m2} \cdot x_{2} + \dots + a_{mn} \cdot x_{n} = b_{m} \\
+                            \end{cases}
+                            $$
+                            <i>Observație:</i> $x_{1}, x_{2},\dots,x_{n} \in \mathbb{C}$ sunt necunoscutele, $a_{ij}, i = \overline{1,m}, j = \overline{1,n}$ sunt <i>coeficienții necunoscutelor</i>, iar $b_{i}, i = \overline{1,m}$ sunt <i>termenii liberi</i>.
+                            <br> <br>
+                            &bull; <i>Observație: </i> Soluție a sistemului (S) este un <i>n</i>-uplu ($x_{1}, x_{2}, \dots, x_{n}$) ale cărui componente (numere) verifică ecuațiile sistemului.
+                            <br> <br>
+                            &bull; $\text{Matricea} \begin{pmatrix} a_{11} & a_{12} & \dots & a_{1n} \\ a{21} & a_{22} & \dots & a_{2n} \\ \dots & \dots & \dots & \dots\\ a_{m1} & a_{m2} & \dots & a_{mn} \end{pmatrix} \text{reprezintă matricea sistemului, iar matricea } \overline A = \begin{pmatrix} a_{11} & a_{12} & \dots & a_{1n} & b_{1} \\ a{21} & a_{22} & \dots & a_{2n} & b_{2} \\ \dots & \dots & \dots & \dots & \dots\\ a_{m1} & a_{m2} & \dots & a_{mn} & b_{m} \end{pmatrix} \text{reprezintă matricea extinsă a sistemului}.$
+                            <br> <br>
+                            &bull; <strong>Observație:</strong> Dacă notăm cu $X = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} \in M_{n,1}(\mathbb{C})$ matricea coloană a necunoscutelor și cu $B= \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix} \in M_{m,1}(\mathbb{C})$ matricea coloană a termenilor liberi, sistemul (S) se poate scrie succint sub forma matriceală $AX=B$.
+                            <br> <br>
+                            <strong>Sistemul liniar</strong> (sau de ecuații liniare) (S) se numește <i>compatibil</i> dacă are cel puțin o soluție; în caz contrar, sistemul se numește <i>incompatibil</i>; dacă sistemul are o unică soluție, atunci este <i>compatibil determinat</i>, iar dacă are mai multe soluții, sistemul este <i>compatibil nedeterminat</i>.
+                            <br> <br>
+                            <strong>Rangul matricei</strong> $A$ a sistemului se numește chiar și rangul sistemului, iar ecuațiile care corespund liniilor principale ale matricei se numesc <i>ecuații principale</i> (evident, cele care corespund liniilor secundare se numesc <i>ecuații secundare</i>); la fel avem pentru necunoscute: principale, respectiv secundare.
+                            <br> <br>
+                            <strong>Teoremă (Kronecker-Capelli):</strong> Un sistem liniar este compatibil dacă și numai dacă rangul matricei sistemului este egal cu rangul matricei extinse.
+                            <br> <br>
+                            Rangul matricei $A$ a sistemului liniar (S) este dat de un minor principal $ d=d_{p} $; bordații acestui minor, în matricea extinsă, cu elemente de pe coloana termenilor liberi (dacă există astfel de bordați), se numesc <i>minori caracteristici</i> (de obicei, dacă există unul singur, acesta se notează cu $d_{c})$.
+                            <br> <br>
+                            <strong>Teoremă (Rouché):</strong> Dacă $r &lt; m$ (adică rangul sistemului este mai mic decât numărul ecuațiilor), atunci sistemul liniar (S) este compatibil dacă și numai dacă toți minorii caracteristici (dacă există) sunt nuli.
+                            <br> <br>
+                            <strong>Cazuri particulare:</strong>
+                            <ul class="list-decimal pl-8">
+                                <li>
+                                    <i>Sisteme Cramer:</i> sistem cu $n$ ecuații și $n$ necunoscute, cu $\det A\neq 0$; în acest caz, notând cu $d_{j}$, $j=\overline{1,n}$, minorul obținut din determinantul matricei sistemului prin înlocuirea coloanei $j$ cu coloana termenilor liberi, sistemul are soluție unică:
+                                    $$
+                                    x_1=\frac{d_1}{\det A},\quad
+                                    x_2=\frac{d_2}{\det A},\quad
+                                    \ldots,\quad
+                                    x_n=\frac{d_n}{\det A}
+                                    \text{(Regula lui Cramer)}
+                                    $$
+                                </li>
+                                <li>
+                                    <i>Sisteme omogene: </i> sisteme cu toți termenii liberi nuli; evident, un astfel de sistem are cel puțin soluția nulă (sau banală), deci este compatibil; în cazul în care $m=n$, acesta are și soluții nenule dacă și numai dacă $\det A=0$.
+                                </li>
+                            </ul>
+                        </p>
                     </div>
                 </details>
             </article>
