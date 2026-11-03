@@ -5,8 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clasa a 11-a</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Ascunde săgețile pentru Chrome, Safari, Edge, Opera */
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+    </style>
+
     <script src="main.js"></script>
+    <script src="matrix.js"></script>
     <script>
         window.MathJax = {
             tex: {
@@ -281,10 +292,55 @@
         </section>
 
         <section id="sec-calculator" class="tab-content hidden space-y-4">
-            <h2>Test2</h2>
+            <h2 class="text-xl font-semibold mb-6 text-slate-200 pb-2 text-center">Calculator de matrice</h2>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                
+                <div class="bg-[#1e1e1e] border border-[#161616] rounded-md p-5 shadow-md w-full md:w-auto flex flex-col items-center">
+                    
+                    <!--MATRICEA A-->
+                    <h3 class="text-md font-bold text-slate-200 mb-3">Matricea A</h3>
+                    <div id="grid-a" class="grid grid-cols-3 gap-2 p-3 bg-cyan-600 rounded-md mb-4">
+                        <!-- Placeholder vizual pentru 3x3 inputuri -->
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-cyan-500 border-2 border-cyan-700 text-cyan-950 font-mono rounded focus:border-cyan-950 outline-none">
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-cyan-500 border-2 border-cyan-700 text-cyan-950 font-mono rounded focus:border-cyan-950 outline-none">
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-cyan-500 border-2 border-cyan-700 text-cyan-950 font-mono rounded focus:border-cyan-950 outline-none">
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-cyan-500 border-2 border-cyan-700 text-cyan-950 font-mono rounded focus:border-cyan-950 outline-none">
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-cyan-500 border-2 border-cyan-700 text-cyan-950 font-mono rounded focus:border-cyan-950 outline-none">
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-cyan-500 border-2 border-cyan-700 text-cyan-950 font-mono rounded focus:border-cyan-950 outline-none">
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-cyan-500 border-2 border-cyan-700 text-cyan-950 font-mono rounded focus:border-cyan-950 outline-none">
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-cyan-500 border-2 border-cyan-700 text-cyan-950 font-mono rounded focus:border-cyan-950 outline-none">
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-cyan-500 border-2 border-cyan-700 text-cyan-950 font-mono rounded focus:border-cyan-950 outline-none">
+                    </div>
+                </div> 
+                
+                <!--OPERATII BINARE-->
+                <div class="flex md:flex-col gap-2 my-2 md:my-0">
+                            <button class="w-10 h-10 bg-[#1e1e1e] border border-[#2c2c2c] hover:border-cyan-600 text-slate-200 hover:text-cyan-600 font-bold rounded-md shadow transition flex items-center justify-center text-lg">+</button>
+                            <button class="w-10 h-10 bg-[#1e1e1e] border border-[#2c2c2c] hover:border-cyan-600 text-slate-200 hover:text-cyan-600 font-bold rounded-md shadow transition flex items-center justify-center text-lg">-</button>
+                            <button class="w-10 h-10 bg-[#1e1e1e] border border-[#2c2c2c] hover:border-cyan-600 text-slate-200 hover:text-cyan-600 font-bold rounded-md shadow transition flex items-center justify-center text-lg">&times;</button>
+                        </div>
+
+                <!--MATRICEA B-->
+                <div class="bg-[#1e1e1e] border border-[#161616] rounded-md p-5 shadow-md w-full md:w-auto flex flex-col items-center">
+                    <h3 class="text-md font-bold text-slate-200 mb-3">Matricea B</h3>
+                    <div id="grid-b" class="grid grid-cols-3 gap-2 p-3 bg-emerald-600 rounded-md mb-4">
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-emerald-500 border-2 border-emerald-700 text-emerald-950 font-mono rounded focus:border-emerald-950 outline-none">
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-emerald-500 border-2 border-emerald-700 text-emerald-950 font-mono rounded focus:border-emerald-950 outline-none">
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-emerald-500 border-2 border-emerald-700 text-emerald-950 font-mono rounded focus:border-emerald-950 outline-none">
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-emerald-500 border-2 border-emerald-700 text-emerald-950 font-mono rounded focus:border-emerald-950 outline-none">
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-emerald-500 border-2 border-emerald-700 text-emerald-950 font-mono rounded focus:border-emerald-950 outline-none">
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-emerald-500 border-2 border-emerald-700 text-emerald-950 font-mono rounded focus:border-emerald-950 outline-none">
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-emerald-500 border-2 border-emerald-700 text-emerald-950 font-mono rounded focus:border-emerald-950 outline-none">
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-emerald-500 border-2 border-emerald-700 text-emerald-950 font-mono rounded focus:border-emerald-950 outline-none">
+                        <input type="number" value="0" class="w-12 h-12 text-center bg-emerald-500 border-2 border-emerald-700 text-emerald-950 font-mono rounded focus:border-emerald-950 outline-none">
+                    </div>
+                </div>
+            </div>
+
         </section>
         <section id="sec-vizualizare" class="tab-content hidden space-y-4">
-            <h2>Test3</h2>
+            <h2 class="text-xl font-semibold mb-6 text-slate-200 pb-2 text-center">Studiu de caz: Vizualizarea transformărilor lineare în 2D și 3D</h2>
         </section>
     </main>
 
