@@ -296,9 +296,9 @@
             
             <div class="flex flex-col md:flex-row items-center justify-center gap-6">
                 
+                <!--MATRICEA A-->
                 <div class="bg-[#1e1e1e] border border-[#161616] rounded-md p-5 shadow-md w-full md:w-auto flex flex-col items-center">
                     
-                    <!--MATRICEA A-->
                     <h3 class="text-md font-bold text-slate-200 mb-3">Matricea A</h3>
                     <div id="grid-a" class="grid grid-cols-3 gap-2 p-3 bg-cyan-600 rounded-md mb-4">
                         <!-- Placeholder vizual pentru 3x3 inputuri -->
@@ -312,13 +312,29 @@
                         <input type="number" value="0" class="w-12 h-12 text-center bg-cyan-500 border-2 border-cyan-700 text-cyan-950 font-mono rounded focus:border-cyan-950 outline-none">
                         <input type="number" value="0" class="w-12 h-12 text-center bg-cyan-500 border-2 border-cyan-700 text-cyan-950 font-mono rounded focus:border-cyan-950 outline-none">
                     </div>
+                    <!--OPERATII UNARE ASOCIATE MATRICEI A-->
+                    <div class="w-full space-y-2 pt-2 border-t border-[#2c2c2c] md:border-t-0 md:pt-0">
+                                    <div class="flex gap-2">
+                                        <button class="flex-1 bg-[#121212] border border-[#2c2c2c] hover:border-cyan-600 text-xs text-slate-200 hover:text-white py-2 rounded-md transition font-mono">$\det A$</button>
+                                        <button class="flex-1 bg-[#121212] border border-[#2c2c2c] hover:border-cyan-600 text-xs text-slate-200 hover:text-white py-2 rounded-md transition font-mono">$A^{-1}$</button>
+                                        <button class="flex-1 bg-[#121212] border border-[#2c2c2c] hover:border-cyan-600 text-xs text-slate-200 hover:text-white py-2 rounded-md transition font-mono">$A^\top$</button>
+                                    </div>
+                                    <!--Puterea A^k-->
+                                    <div class="flex items-center gap-2">
+                                        <button class="flex-grow bg-[#121212] border border-[#2c2c2c] hover:border-cyan-600 text-xs text-slate-200 hover:text-white py-2 px-3 rounded-md transition font-mono text-left">
+                                            A<sup class="text-cyan-600">k</sup> (Putere)
+                                        </button>
+                                        <input type="number" id="power-a" value="2" min="1" max="10" class="w-14 text-center bg-[#121212] border border-[#2c2c2c] text-cyan-600 font-mono rounded-md text-xs py-2 focus:border-cyan-600 outline-none appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [-moz-appearance:textfield]">
+                                    </div>
+                    </div>
                 </div> 
                 
+
                 <!--OPERATII BINARE-->
-                <div class="flex md:flex-col gap-2 my-2 md:my-0">
-                            <button class="w-10 h-10 bg-[#1e1e1e] border border-[#2c2c2c] hover:border-cyan-600 text-slate-200 hover:text-cyan-600 font-bold rounded-md shadow transition flex items-center justify-center text-lg">+</button>
-                            <button class="w-10 h-10 bg-[#1e1e1e] border border-[#2c2c2c] hover:border-cyan-600 text-slate-200 hover:text-cyan-600 font-bold rounded-md shadow transition flex items-center justify-center text-lg">-</button>
-                            <button class="w-10 h-10 bg-[#1e1e1e] border border-[#2c2c2c] hover:border-cyan-600 text-slate-200 hover:text-cyan-600 font-bold rounded-md shadow transition flex items-center justify-center text-lg">&times;</button>
+                <div class="flex md:flex-col gap-2 my-4 md:my-0 order-second md:order-none">
+                            <button class="w-10 h-10 bg-[#121212] border border-[#2c2c2c] hover:border-cyan-600 text-slate-200 hover:text-cyan-600 font-bold rounded-md shadow transition flex items-center justify-center text-lg">+</button>
+                            <button class="w-10 h-10 bg-[#121212] border border-[#2c2c2c] hover:border-cyan-600 text-slate-200 hover:text-cyan-600 font-bold rounded-md shadow transition flex items-center justify-center text-lg">-</button>
+                            <button class="w-10 h-10 bg-[#121212] border border-[#2c2c2c] hover:border-cyan-600 text-slate-200 hover:text-cyan-600 font-bold rounded-md shadow transition flex items-center justify-center text-lg">&times;</button>
                         </div>
 
                 <!--MATRICEA B-->
@@ -335,9 +351,32 @@
                         <input type="number" value="0" class="w-12 h-12 text-center bg-emerald-500 border-2 border-emerald-700 text-emerald-950 font-mono rounded focus:border-emerald-950 outline-none">
                         <input type="number" value="0" class="w-12 h-12 text-center bg-emerald-500 border-2 border-emerald-700 text-emerald-950 font-mono rounded focus:border-emerald-950 outline-none">
                     </div>
+
+                    <!--OPERATII UNARE ASOCIATE MATRICEI B-->
+                    <div class="w-full space-y-2 pt-2 border-t border-[#2c2c2c] md:border-t-0 md:pt-0">
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-[#121212] border border-[#2c2c2c] hover:border-emerald-600 text-xs text-slate-200 hover:text-white py-2 rounded-md transition font-mono">$\det B$</button>
+                            <button class="flex-1 bg-[#121212] border border-[#2c2c2c] hover:border-emerald-600 text-xs text-slate-200 hover:text-white py-2 rounded-md transition font-mono">$B^{-1}$</button>
+                            <button class="flex-1 bg-[#121212] border border-[#2c2c2c] hover:border-emerald-600 text-xs text-slate-200 hover:text-white py-2 rounded-md transition font-mono">$B^\top$</button>
+                        </div>
+                        <!--Puterea B^k-->
+                        <div class="flex items-center gap-2">
+                            <button class="flex-grow bg-[#121212] border border-[#2c2c2c] hover:border-emerald-600 text-xs text-slate-200 hover:text-white py-2 px-3 rounded-md transition font-mono text-left">
+                                B<sup class="text-emerald-600">k</sup> (Putere)
+                            </button>
+                            <input type="number" id="power-b" value="2" min="1" max="10" class="w-14 text-center bg-[#121212] border border-[#2c2c2c] text-emerald-600 font-mono rounded-md text-xs py-2 focus:border-emerald-600 outline-none appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [-moz-appearance:textfield]">
+                        </div>
+                    </div>
                 </div>
             </div>
 
+            <!--ZONA REZULTATELOR-->
+            <div class="bg-[#1e1e1e] border border-[#2c2c2c] p-6 mt-6 rounded-md shadow-md">
+                <h3 class="text-md font-bold text-center text-cyan-600 mb-3">Rezultat</h3>
+                <div id="matrix-result" class="min-h-[100px] bg-[#121212] border border-[#2c2c2c] rounded-md flex items-center justify-center text-slate-200 font-mono text-sm">
+                    Introdu o / ambele matrice și folosește o operație
+                </div>
+            </div>
         </section>
         <section id="sec-vizualizare" class="tab-content hidden space-y-4">
             <h2 class="text-xl font-semibold mb-6 text-slate-200 pb-2 text-center">Studiu de caz: Vizualizarea transformărilor lineare în 2D și 3D</h2>
