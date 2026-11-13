@@ -300,6 +300,11 @@
                 <div class="bg-[#1e1e1e] border border-[#161616] rounded-md p-5 shadow-md w-full md:w-auto flex flex-col items-center">
                     
                     <h3 class="text-md font-bold text-slate-200 mb-3">Matricea A</h3>
+                    <div class="flex items-center gap-2 mb-4 text-xs text-slate-200">
+                        <span>Dimensiune: ($\in [2,5]$)</span>
+                        <input type="range" id="size-a" min="2" max="5" value="3" class="accent-cyan-500 cursor-pointer">
+                        <span id="size-a-label" class="font-mono text-cyan-600 font-bold">3 $\times$ 3</span>
+                    </div>
                     <div id="grid-a" class="grid grid-cols-3 gap-2 p-3 bg-cyan-600 rounded-md mb-4">
                         <!-- Placeholder vizual pentru 3x3 inputuri -->
                         <input type="number" value="0" class="w-12 h-12 text-center bg-cyan-500 border-2 border-cyan-700 text-cyan-950 font-mono rounded focus:border-cyan-950 outline-none">
@@ -340,6 +345,11 @@
                 <!--MATRICEA B-->
                 <div class="bg-[#1e1e1e] border border-[#161616] rounded-md p-5 shadow-md w-full md:w-auto flex flex-col items-center">
                     <h3 class="text-md font-bold text-slate-200 mb-3">Matricea B</h3>
+                    <div class="flex items-center gap-2 mb-4 text-xs text-slate-200">
+                        <span>Dimensiune: ($\in [2,5]$)</span>
+                        <input type="range" id="size-b" min="2" max="5" value="3" class="accent-emerald-500 cursor-pointer">
+                        <span id="size-b-label" class="font-mono text-emerald-600 font-bold">3 $\times$ 3</span>
+                    </div>
                     <div id="grid-b" class="grid grid-cols-3 gap-2 p-3 bg-emerald-600 rounded-md mb-4">
                         <input type="number" value="0" class="w-12 h-12 text-center bg-emerald-500 border-2 border-emerald-700 text-emerald-950 font-mono rounded focus:border-emerald-950 outline-none">
                         <input type="number" value="0" class="w-12 h-12 text-center bg-emerald-500 border-2 border-emerald-700 text-emerald-950 font-mono rounded focus:border-emerald-950 outline-none">
@@ -374,7 +384,7 @@
             <div class="bg-[#1e1e1e] border border-[#2c2c2c] p-6 mt-6 rounded-md shadow-md">
                 <h3 class="text-md font-bold text-center text-cyan-600 mb-3">Rezultat</h3>
                 <div id="matrix-result" class="min-h-[100px] bg-[#121212] border border-[#2c2c2c] rounded-md flex items-center justify-center text-slate-200 font-mono text-sm">
-                    Introdu o / ambele matrice și folosește o operație
+                    Introdu o matrice sau pe ambele și folosește o operație
                 </div>
             </div>
         </section>
